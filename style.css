@@ -133,23 +133,12 @@ body {
     font-size: 0.9rem;
     color: var(--text-secondary);
     position: relative;
-    transition: all 0.3s ease;
+    transition: color 0.3s ease;
     text-transform: lowercase;
 }
 
-.nav-links a::before {
-    content: attr(data-text);
-    position: absolute;
-    top: 0;
-    left: 0;
+.nav-links a:hover {
     color: var(--neon-cyan);
-    overflow: hidden;
-    width: 0;
-    transition: width 0.3s ease;
-}
-
-.nav-links a:hover::before {
-    width: 100%;
 }
 
 .nav-links a:hover {
