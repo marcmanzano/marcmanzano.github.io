@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post Title — Marc Manzano</title>
+    <meta name="description" content="Blog post description goes here.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../blog-style.css">
+</head>
+<body>
+    <!-- Matrix background effect -->
+    <canvas id="matrix-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="/" class="logo">
+                <span class="terminal-prompt">$</span> marcmanzano
+            </a>
+            <div class="nav-links">
+                <a href="/#about" data-text="about">about</a>
+                <a href="/#experience" data-text="experience">experience</a>
+                <a href="/#research" data-text="research">research</a>
+                <a href="../blog.html" data-text="blog">blog</a>
+                <a href="/#contact" data-text="contact">contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Post Content -->
+    <article class="post-content">
+        <div class="container">
+            <!-- Post Header -->
+            <div class="post-meta">
+                <div class="post-tags">
+                    <span class="post-tag">cryptography</span>
+                    <span class="post-tag">security</span>
+                </div>
+                <div class="post-date">2026-05-25</div>
+            </div>
+
+            <h1>Your Blog Post Title Goes Here</h1>
+
+            <p class="lead" style="font-size: 1.3rem; color: var(--text-primary); margin-bottom: 2rem;">
+                This is the lead paragraph that introduces your post. Make it compelling and give readers a reason to keep reading.
+            </p>
+
+            <!-- Content Starts Here -->
+            <h2>Section Heading</h2>
+
+            <p>
+                This is where you write your blog post content. Use paragraphs to break up your ideas and make the text easier to read.
+            </p>
+
+            <p>
+                You can include <code>inline code snippets</code> like this, or larger code blocks below:
+            </p>
+
+            <pre><code>// Example code block
+function postQuantumEncrypt(data, publicKey) {
+    // Your cryptographic magic here
+    return encryptedData;
+}</code></pre>
+
+            <h3>Subsection</h3>
+
+            <p>
+                You can also create lists to organize your thoughts:
+            </p>
+
+            <ul>
+                <li>First important point about cryptography</li>
+                <li>Second key insight about security</li>
+                <li>Third observation from the field</li>
+            </ul>
+
+            <blockquote>
+                "This is a quote that adds emphasis to your point. Use it to highlight important ideas or reference other thinkers."
+            </blockquote>
+
+            <h2>Another Major Section</h2>
+
+            <p>
+                Continue your post with more sections as needed. Keep paragraphs focused and use headings to guide readers through your narrative.
+            </p>
+
+            <p>
+                Add links to external resources like this: <a href="https://example.com" target="_blank">relevant research paper</a>.
+            </p>
+
+            <h2>Conclusion</h2>
+
+            <p>
+                Wrap up your post with key takeaways and maybe a call to action. What do you want readers to think about or do after reading?
+            </p>
+
+            <!-- Post Navigation -->
+            <div class="post-nav">
+                <a href="../blog.html">← Back to all posts</a>
+                <a href="#contact">Get in touch →</a>
+            </div>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p class="footer-terminal">
+                        <span class="terminal-prompt">$</span> Writing about security, crypto, and life
+                    </p>
+                    <p class="footer-copyright">© 2026 Marc Manzano. All rights reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="/">Home</a>
+                    <a href="../blog.html">Blog</a>
+                    <a href="https://www.linkedin.com/in/marcmanzano/" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
