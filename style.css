@@ -828,9 +828,28 @@ body {
     line-height: 1.4;
 }
 
+.pub-title a {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: all 0.15s ease;
+}
+
+.pub-title a:hover {
+    color: var(--neon-cyan);
+    text-shadow: var(--glow-cyan);
+}
+
 .publication-card.featured .pub-title {
     font-size: 1.8rem;
     color: var(--neon-cyan);
+}
+
+.publication-card.featured .pub-title a {
+    color: var(--neon-cyan);
+}
+
+.publication-card.featured .pub-title a:hover {
+    color: var(--neon-purple);
 }
 
 .pub-desc {
