@@ -580,6 +580,17 @@ body {
     margin-right: 0.5rem;
 }
 
+.interest-box a {
+    color: var(--neon-cyan);
+    text-decoration: none;
+    transition: all 0.15s ease;
+}
+
+.interest-box a:hover {
+    color: var(--neon-purple);
+    text-shadow: var(--glow-cyan);
+}
+
 /* ============================================
    Experience Section
    ============================================ */
