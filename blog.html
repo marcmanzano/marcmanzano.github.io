@@ -27,7 +27,7 @@
     <link rel="apple-touch-icon" href="favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="blog-style.css">
 </head>
@@ -37,49 +37,37 @@
     <!-- Navigation -->
     <nav class="nav">
         <div class="nav-container">
-            <a href="index.html" class="logo">
-                <span class="terminal-prompt">$</span> marcmanzano
-            </a>
-            <div class="nav-links">
-                <a href="index.html#about" data-text="about">about</a>
-                <a href="index.html#experience" data-text="experience">experience</a>
-                <a href="index.html#research" data-text="research">research</a>
-                <a href="blog.html" data-text="blog">blog</a>
-                <a href="index.html#contact" data-text="contact">contact</a>
+            <a href="index.html" class="logo">Marc Manzano</a>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html#career">Career</a>
+                <a href="index.html#publications">Publications</a>
+                <a href="index.html#education">Education</a>
+                <a href="index.html#about">About</a>
+                <a href="blog.html">Blog</a>
+                <a href="index.html#contact" class="nav-links-cta">Get in touch</a>
             </div>
+            <a href="index.html#contact" class="nav-cta">Get in touch</a>
+            <button class="nav-toggle" aria-label="Toggle menu" aria-controls="nav-links" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </nav>
 
     <!-- Blog Header -->
     <section class="blog-header" id="main">
         <div class="container">
-            <div class="terminal-window">
-                <div class="terminal-header">
-                    <span class="terminal-dot red"></span>
-                    <span class="terminal-dot yellow"></span>
-                    <span class="terminal-dot green"></span>
-                    <span class="terminal-title">blog.sh</span>
-                </div>
-                <div class="terminal-body">
-                    <p class="terminal-line"><span class="prompt">$</span> cat README.md</p>
-                    <p class="terminal-output">Thoughts on cryptography, security, privacy, maths, physics, history and endurance sports, or about any other thing in life</p>
-                    <p class="terminal-line"><span class="prompt">$</span> ls -la posts/</p>
-                    <p class="cursor-blink">_</p>
-                </div>
-            </div>
-            <h1 class="glitch" data-text="Blog">Blog</h1>
-            <p class="blog-subtitle">Words on bits, kilometers and other stuff</p>
+            <p class="blog-eyebrow">Writing</p>
+            <h1>Blog</h1>
+            <p class="blog-subtitle">Words on bits, kilometers and other stuff.</p>
         </div>
     </section>
 
     <!-- Blog Posts -->
     <section class="blog-posts">
         <div class="container">
-            <!-- Post Grid -->
-            <div class="posts-grid" style="display: flex; justify-content: center; align-items: center; min-height: 300px;">
-                <div style="text-align: center; max-width: 600px;">
-                    <h2 style="font-size: 2rem; color: var(--neon-cyan); margin-bottom: 1rem; font-family: var(--font-mono);">First blog post coming soon...</h2>
-                </div>
+            <div class="posts-empty">
+                <h2>First blog post coming soon…</h2>
+                <p>Thoughts on cryptography, security, privacy, maths, physics, history and endurance sports — or about any other thing in life.</p>
             </div>
         </div>
     </section>
@@ -89,15 +77,13 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-left">
-                    <p class="footer-terminal">
-                        <span class="terminal-prompt">$</span> "Som i serem" — Àngel Guimerà
-                    </p>
+                    <p class="footer-terminal">"Som i serem" — Àngel Guimerà</p>
                     <p class="footer-copyright">© 2026 Marc Manzano. All rights reserved.</p>
                 </div>
                 <div class="footer-links">
                     <a href="https://www.linkedin.com/in/marcmanzano/" target="_blank" rel="noopener">LinkedIn</a>
                     <a href="https://twitter.com/marcmanzano" target="_blank" rel="noopener">Twitter</a>
-                    <a href="/">Home</a>
+                    <a href="index.html">Home</a>
                 </div>
             </div>
         </div>
