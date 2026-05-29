@@ -1,49 +1,8 @@
 // ============================================
-// Matrix Background Effect
+// Reduced-motion preference
 // ============================================
 
-const canvas = document.getElementById('matrix-canvas');
-const ctx = canvas.getContext('2d');
-
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-const chars = 'アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン01';
-const charArray = chars.split('');
-
-const fontSize = 14;
-const columns = canvas.width / fontSize;
-
-const drops = [];
-for (let i = 0; i < columns; i++) {
-    drops[i] = Math.random() * -100;
-}
-
-function drawMatrix() {
-    ctx.fillStyle = 'rgba(10, 14, 39, 0.05)';
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-    ctx.fillStyle = '#00F0FF';
-    ctx.font = fontSize + 'px monospace';
-
-    for (let i = 0; i < drops.length; i++) {
-        const text = charArray[Math.floor(Math.random() * charArray.length)];
-        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
-        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-            drops[i] = 0;
-        }
-        drops[i]++;
-    }
-}
-
-// Matrix animation disabled per user request
-// setInterval(drawMatrix, 35);
-
-// window.addEventListener('resize', () => {
-//     canvas.width = window.innerWidth;
-//     canvas.height = window.innerHeight;
-// });
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 // ============================================
 // Smooth Scroll
@@ -145,13 +104,14 @@ document.querySelectorAll('.publication-card').forEach(card => {
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-links a');
 
-window.addEventListener('scroll', () => {
+let scrollTicking = false;
+
+function updateActiveNav() {
     let current = '';
 
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (pageYOffset >= (sectionTop - 200)) {
+        if (window.scrollY >= (sectionTop - 200)) {
             current = section.getAttribute('id');
         }
     });
@@ -162,7 +122,16 @@ window.addEventListener('scroll', () => {
             link.style.color = '#00F0FF';
         }
     });
-});
+
+    scrollTicking = false;
+}
+
+window.addEventListener('scroll', () => {
+    if (!scrollTicking) {
+        window.requestAnimationFrame(updateActiveNav);
+        scrollTicking = true;
+    }
+}, { passive: true });
 
 // ============================================
 // Terminal Typing Effect
@@ -229,7 +198,7 @@ document.addEventListener('mousemove', (e) => {
 const coords = { x: 0, y: 0 };
 const circles = document.querySelectorAll('.cursor-circle');
 
-if (circles.length === 0 && window.innerWidth > 768) {
+if (circles.length === 0 && window.innerWidth > 768 && !prefersReducedMotion) {
     for (let i = 0; i < 12; i++) {
         const circle = document.createElement('div');
         circle.className = 'cursor-circle';
@@ -271,7 +240,7 @@ function animateCursor() {
     requestAnimationFrame(animateCursor);
 }
 
-if (window.innerWidth > 768) {
+if (window.innerWidth > 768 && !prefersReducedMotion) {
     animateCursor();
 }
 

@@ -33,7 +33,7 @@ code, pre {
     /* Text colors */
     --text-primary: #E8E8E8;
     --text-secondary: #A0A0A0;
-    --text-muted: #606060;
+    --text-muted: #8B8B8B;
 
     /* Fonts */
     --font-mono: 'JetBrains Mono', 'Courier New', monospace;
@@ -1393,4 +1393,57 @@ body {
 
 .fade-in {
     animation: fadeIn 0.6s ease forwards;
+}
+
+/* ============================================
+   Accessibility
+   ============================================ */
+
+/* Skip to content link — visible only on keyboard focus */
+.skip-link {
+    position: absolute;
+    left: 1rem;
+    top: -3rem;
+    z-index: 2000;
+    padding: 0.6rem 1rem;
+    background: var(--neon-cyan);
+    color: #000;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    border-radius: 4px;
+    transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+    top: 1rem;
+}
+
+/* Visible focus indicator for keyboard navigation */
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--neon-cyan);
+    outline-offset: 3px;
+    border-radius: 2px;
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    /* Show elements that rely on JS/scroll animations to fade in */
+    .timeline-item {
+        opacity: 1 !important;
+        transform: none !important;
+    }
 }
