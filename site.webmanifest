@@ -1,0 +1,17 @@
+{
+  "name": "Marc Manzano",
+  "short_name": "Marc Manzano",
+  "description": "Cybersecurity executive, cryptography engineer, runner, and father.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "favicon.png?v=2",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

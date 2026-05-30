@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="robots" content="noindex">
+    <title>Page not found — Marc Manzano</title>
+    <link rel="canonical" href="https://marcmanzano.com/404.html">
+    <link rel="icon" type="image/png" href="/favicon.png?v=2">
+    <link rel="apple-touch-icon" href="/favicon.png?v=2">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        .notfound {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem 1.5rem;
+        }
+        .notfound-code {
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            letter-spacing: 0.08em;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+        .notfound h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 6vw, 3.25rem);
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: var(--ink);
+            margin-bottom: 1rem;
+        }
+        .notfound p {
+            color: var(--text-secondary);
+            max-width: 32rem;
+            margin: 0 auto 2rem;
+        }
+    </style>
+</head>
+<body>
+    <main class="notfound">
+        <p class="notfound-code">404 — PAGE NOT FOUND</p>
+        <h1>This page wandered off.</h1>
+        <p>The link may be broken or the page may have moved. Let's get you back on track.</p>
+        <a href="/" class="btn btn-primary">Back to home</a>
+    </main>
+</body>
+</html>

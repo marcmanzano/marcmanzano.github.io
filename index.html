@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'">
+    <meta name="theme-color" content="#ffffff">
     <title>Marc Manzano — Cybersecurity Leader & Cryptography Engineer</title>
     <meta name="description" content="Cybersecurity executive, cryptography engineer, runner, and father. Leading the Cybersecurity Group at SandboxAQ.">
     <link rel="canonical" href="https://marcmanzano.com/">
@@ -45,6 +47,8 @@
 
     <link rel="icon" type="image/png" href="favicon.png?v=2">
     <link rel="apple-touch-icon" href="favicon.png?v=2">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="preload" as="image" href="images/marc-portrait.webp" fetchpriority="high">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -76,7 +80,7 @@
     <section class="hero" id="home">
         <div class="hero-container">
             <div class="hero-image reveal">
-                <img src="images/marc-portrait.webp" alt="Marc Manzano by the ocean" width="1200" height="900" />
+                <img src="images/marc-portrait.webp" alt="Marc Manzano by the ocean" width="1200" height="900" fetchpriority="high" />
             </div>
 
             <div class="hero-text reveal">
@@ -191,7 +195,7 @@
 
             <h3 class="subsection-heading">Scientific Articles</h3>
             <div class="rows">
-                <a class="row pub-row featured reveal" href="https://www.nature.com/articles/s41586-022-04623-2" target="_blank" rel="noopener">
+                <a class="row pub-row featured reveal" href="https://www.nature.com/articles/s41586-022-04623-2" target="_blank" rel="noopener noreferrer">
                     <div class="row-meta">
                         <p class="pub-venue">Nature</p>
                         <div class="pub-meta">
@@ -205,7 +209,7 @@
                     </div>
                 </a>
 
-                <a class="row pub-row reveal" href="https://www.sciencedirect.com/science/article/pii/S2542660526000776" target="_blank" rel="noopener">
+                <a class="row pub-row reveal" href="https://www.sciencedirect.com/science/article/pii/S2542660526000776" target="_blank" rel="noopener noreferrer">
                     <div class="row-meta">
                         <p class="pub-venue">Internet of Things</p>
                         <div class="pub-meta">
@@ -219,7 +223,7 @@
                     </div>
                 </a>
 
-                <a class="row pub-row reveal" href="https://ieeexplore.ieee.org/document/9910347" target="_blank" rel="noopener">
+                <a class="row pub-row reveal" href="https://ieeexplore.ieee.org/document/9910347" target="_blank" rel="noopener noreferrer">
                     <div class="row-meta">
                         <p class="pub-venue">IEEE</p>
                         <div class="pub-meta">
@@ -233,7 +237,7 @@
                     </div>
                 </a>
 
-                <a class="row pub-row reveal" href="https://www.nature.com/articles/srep06133" target="_blank" rel="noopener">
+                <a class="row pub-row reveal" href="https://www.nature.com/articles/srep06133" target="_blank" rel="noopener noreferrer">
                     <div class="row-meta">
                         <p class="pub-venue">Scientific Reports</p>
                         <div class="pub-meta">
@@ -249,7 +253,7 @@
             </div>
 
             <div style="margin-top: 3.5rem;">
-                <a href="https://scholar.google.com/citations?user=XW9J4foAAAAJ&hl=en" target="_blank" rel="noopener" class="btn btn-secondary">
+                <a href="https://scholar.google.com/citations?user=XW9J4foAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     <span>View all publications on Google Scholar</span>
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <path d="M7 7h10v10" />
@@ -260,7 +264,7 @@
 
             <h3 class="subsection-heading subsection-gap">Patents</h3>
             <div class="rows">
-                <a class="row pub-row reveal" href="https://patents.google.com/patent/US12549601B1/en?inventor=Marc+Manzano&oq=inventor:(Marc+Manzano)" target="_blank" rel="noopener">
+                <a class="row pub-row reveal" href="https://patents.google.com/patent/US12549601B1/en?inventor=Marc+Manzano&oq=inventor:(Marc+Manzano)" target="_blank" rel="noopener noreferrer">
                     <div class="row-meta">
                         <p class="pub-venue">USPTO</p>
                         <div class="pub-meta">
@@ -274,7 +278,7 @@
                     </div>
                 </a>
 
-                <a class="row pub-row reveal" href="https://patents.google.com/patent/WO2022189850A1/en?inventor=Marcos+Manzano&oq=inventor:(Marcos+Manzano)" target="_blank" rel="noopener">
+                <a class="row pub-row reveal" href="https://patents.google.com/patent/WO2022189850A1/en?inventor=Marcos+Manzano&oq=inventor:(Marcos+Manzano)" target="_blank" rel="noopener noreferrer">
                     <div class="row-meta">
                         <p class="pub-venue">WIPO</p>
                         <div class="pub-meta">
@@ -288,7 +292,7 @@
                     </div>
                 </a>
 
-                <a class="row pub-row reveal" href="https://patents.google.com/patent/US11216577B1/en?inventor=Marcos+Manzano&oq=inventor:(Marcos+Manzano)" target="_blank" rel="noopener">
+                <a class="row pub-row reveal" href="https://patents.google.com/patent/US11216577B1/en?inventor=Marcos+Manzano&oq=inventor:(Marcos+Manzano)" target="_blank" rel="noopener noreferrer">
                     <div class="row-meta">
                         <p class="pub-venue">USPTO</p>
                         <div class="pub-meta">
@@ -383,7 +387,7 @@
                 <div class="about-block reveal">
                     <h3>Volunteering</h3>
                     <ul>
-                        <li>I support the work that <a href="https://seashepherd.org/" target="_blank" rel="noopener">Sea Shepherd Global</a> is doing to protect ocean wildlife</li>
+                        <li>I support the work that <a href="https://seashepherd.org/" target="_blank" rel="noopener noreferrer">Sea Shepherd Global</a> is doing to protect ocean wildlife</li>
                     </ul>
                 </div>
                 </div>
@@ -403,13 +407,13 @@
             <p class="contact-lead">Interested in cryptography, security and privacy, or just want to talk about running and Roman history? Let's connect.</p>
             <div class="contact-actions">
                 <a href="mailto:manzanomarc@gmail.com" class="btn btn-on-dark">Send Email</a>
-                <a href="https://www.linkedin.com/in/marcmanzano/" target="_blank" rel="noopener" class="btn btn-on-dark">
+                <a href="https://www.linkedin.com/in/marcmanzano/" target="_blank" rel="noopener noreferrer" class="btn btn-on-dark">
                     <span>LinkedIn</span>
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <path d="M7 7h10v10" /><path d="M7 17 17 7" />
                     </svg>
                 </a>
-                <a href="https://twitter.com/marcmanzano" target="_blank" rel="noopener" class="btn btn-on-dark">
+                <a href="https://twitter.com/marcmanzano" target="_blank" rel="noopener noreferrer" class="btn btn-on-dark">
                     <span>Twitter</span>
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <path d="M7 7h10v10" /><path d="M7 17 17 7" />
@@ -428,8 +432,8 @@
                     <p class="footer-copyright">© 2026 Marc Manzano. All rights reserved.</p>
                 </div>
                 <div class="footer-links">
-                    <a href="https://www.linkedin.com/in/marcmanzano/" target="_blank" rel="noopener">LinkedIn</a>
-                    <a href="https://twitter.com/marcmanzano" target="_blank" rel="noopener">Twitter</a>
+                    <a href="https://www.linkedin.com/in/marcmanzano/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://twitter.com/marcmanzano" target="_blank" rel="noopener noreferrer">Twitter</a>
                     <a href="blog.html">Blog</a>
                 </div>
             </div>

@@ -3,40 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- EDIT: title + description for each post -->
     <title>Blog Post Title — Marc Manzano</title>
     <meta name="description" content="Blog post description goes here.">
+    <!-- EDIT: canonical to the post's final URL -->
+    <link rel="canonical" href="https://marcmanzano.com/blog/your-post-slug.html">
+
+    <!-- Open Graph / Facebook / LinkedIn -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://marcmanzano.com/blog/your-post-slug.html">
+    <meta property="og:title" content="Blog Post Title — Marc Manzano">
+    <meta property="og:description" content="Blog post description goes here.">
+    <meta property="og:image" content="https://marcmanzano.com/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@marcmanzano">
+    <meta name="twitter:title" content="Blog Post Title — Marc Manzano">
+    <meta name="twitter:description" content="Blog post description goes here.">
+    <meta name="twitter:image" content="https://marcmanzano.com/og-image.jpg">
+
+    <!-- Structured data — EDIT headline, dates, slug -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Blog Post Title",
+      "description": "Blog post description goes here.",
+      "image": "https://marcmanzano.com/og-image.jpg",
+      "datePublished": "2026-05-25",
+      "dateModified": "2026-05-25",
+      "mainEntityOfPage": "https://marcmanzano.com/blog/your-post-slug.html",
+      "author": { "@type": "Person", "name": "Marc Manzano", "url": "https://marcmanzano.com/" },
+      "publisher": { "@type": "Person", "name": "Marc Manzano", "url": "https://marcmanzano.com/" }
+    }
+    </script>
+
     <link rel="icon" type="image/png" href="../favicon.png?v=2">
     <link rel="apple-touch-icon" href="../favicon.png?v=2">
+    <link rel="manifest" href="../site.webmanifest">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../blog-style.css">
 </head>
 <body>
-    <!-- Matrix background effect -->
-    <canvas id="matrix-canvas"></canvas>
+    <a href="#main" class="skip-link">Skip to content</a>
 
     <!-- Navigation -->
     <nav class="nav">
         <div class="nav-container">
-            <a href="/" class="logo">
-                <span class="terminal-prompt">$</span> marcmanzano
-            </a>
-            <div class="nav-links">
-                <a href="/#about" data-text="about">about</a>
-                <a href="/#experience" data-text="experience">experience</a>
-                <a href="/#research" data-text="research">research</a>
-                <a href="../blog.html" data-text="blog">blog</a>
-                <a href="/#contact" data-text="contact">contact</a>
+            <a href="../index.html" class="logo">Marc Manzano</a>
+            <div class="nav-links" id="nav-links">
+                <a href="../index.html#career">Career</a>
+                <a href="../index.html#publications">Publications</a>
+                <a href="../index.html#education">Education</a>
+                <a href="../index.html#about">About</a>
+                <a href="../blog.html">Blog</a>
+                <a href="../index.html#contact" class="nav-links-cta">Get in touch</a>
             </div>
+            <a href="../index.html#contact" class="nav-cta">Get in touch</a>
+            <button class="nav-toggle" aria-label="Toggle menu" aria-controls="nav-links" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </nav>
 
     <!-- Post Content -->
-    <article class="post-content">
+    <article class="post-content" id="main">
         <div class="container">
-            <!-- Post Header -->
+            <!-- Post Header — EDIT tags + date -->
             <div class="post-meta">
                 <div class="post-tags">
                     <span class="post-tag">cryptography</span>
@@ -45,21 +87,25 @@
                 <div class="post-date">2026-05-25</div>
             </div>
 
+            <!-- EDIT: post title -->
             <h1>Your Blog Post Title Goes Here</h1>
 
-            <p class="lead" style="font-size: 1.3rem; color: var(--text-primary); margin-bottom: 2rem;">
-                This is the lead paragraph that introduces your post. Make it compelling and give readers a reason to keep reading.
+            <!-- Content starts here -->
+            <p>
+                This is the lead paragraph that introduces your post. Make it compelling
+                and give readers a reason to keep reading.
             </p>
 
-            <!-- Content Starts Here -->
             <h2>Section Heading</h2>
 
             <p>
-                This is where you write your blog post content. Use paragraphs to break up your ideas and make the text easier to read.
+                This is where you write your blog post content. Use paragraphs to break up
+                your ideas and make the text easier to read.
             </p>
 
             <p>
-                You can include <code>inline code snippets</code> like this, or larger code blocks below:
+                You can include <code>inline code snippets</code> like this, or larger code
+                blocks below:
             </p>
 
             <pre><code>// Example code block
@@ -70,9 +116,7 @@ function postQuantumEncrypt(data, publicKey) {
 
             <h3>Subsection</h3>
 
-            <p>
-                You can also create lists to organize your thoughts:
-            </p>
+            <p>You can also create lists to organize your thoughts:</p>
 
             <ul>
                 <li>First important point about cryptography</li>
@@ -81,29 +125,33 @@ function postQuantumEncrypt(data, publicKey) {
             </ul>
 
             <blockquote>
-                "This is a quote that adds emphasis to your point. Use it to highlight important ideas or reference other thinkers."
+                "This is a quote that adds emphasis to your point. Use it to highlight
+                important ideas or reference other thinkers."
             </blockquote>
 
             <h2>Another Major Section</h2>
 
             <p>
-                Continue your post with more sections as needed. Keep paragraphs focused and use headings to guide readers through your narrative.
+                Continue your post with more sections as needed. Keep paragraphs focused
+                and use headings to guide readers through your narrative.
             </p>
 
             <p>
-                Add links to external resources like this: <a href="https://example.com" target="_blank">relevant research paper</a>.
+                Add links to external resources like this:
+                <a href="https://example.com" target="_blank" rel="noopener noreferrer">relevant research paper</a>.
             </p>
 
             <h2>Conclusion</h2>
 
             <p>
-                Wrap up your post with key takeaways and maybe a call to action. What do you want readers to think about or do after reading?
+                Wrap up your post with key takeaways and maybe a call to action. What do you
+                want readers to think about or do after reading?
             </p>
 
             <!-- Post Navigation -->
             <div class="post-nav">
                 <a href="../blog.html">← Back to all posts</a>
-                <a href="#contact">Get in touch →</a>
+                <a href="../index.html#contact">Get in touch →</a>
             </div>
         </div>
     </article>
@@ -113,15 +161,13 @@ function postQuantumEncrypt(data, publicKey) {
         <div class="container">
             <div class="footer-content">
                 <div class="footer-left">
-                    <p class="footer-terminal">
-                        <span class="terminal-prompt">$</span> Writing about security, crypto, and life
-                    </p>
+                    <p class="footer-terminal">"Som i serem" — Àngel Guimerà</p>
                     <p class="footer-copyright">© 2026 Marc Manzano. All rights reserved.</p>
                 </div>
                 <div class="footer-links">
-                    <a href="/">Home</a>
+                    <a href="https://www.linkedin.com/in/marcmanzano/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://twitter.com/marcmanzano" target="_blank" rel="noopener noreferrer">Twitter</a>
                     <a href="../blog.html">Blog</a>
-                    <a href="https://www.linkedin.com/in/marcmanzano/" target="_blank">LinkedIn</a>
                 </div>
             </div>
         </div>

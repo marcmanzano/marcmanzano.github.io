@@ -47,6 +47,14 @@ if (navToggle && navMenu) {
     window.addEventListener('resize', () => {
         if (window.innerWidth > 768) closeMenu();
     });
+
+    // Close on Escape and return focus to the toggle
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navMenu.classList.contains('open')) {
+            closeMenu();
+            navToggle.focus();
+        }
+    });
 }
 
 // ============================================
